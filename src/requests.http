@@ -1,0 +1,79 @@
+
+#GET USERS
+http://localhost:1234/mobile-app-ws/users/v1?page=0&limit=50
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJ6YUBnbWFpbC5jb20iLCJleHAiOjE1ODg5Mjc0Mjl9.-CUE1m6iOGK1YYszHsplVRUtgUpBJrBh7uWVC952d-vGwRuh8vekpCzafkGvsP4mcQiemXJuMyKKyRB-hx-0jw
+Accept: application/json
+
+###
+#GET USERS v2
+http://localhost:1234/mobile-app-ws/users/v1?page=1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJ6YUBnbWFpbC5jb20iLCJleHAiOjE1ODg5Mjc0Mjl9.-CUE1m6iOGK1YYszHsplVRUtgUpBJrBh7uWVC952d-vGwRuh8vekpCzafkGvsP4mcQiemXJuMyKKyRB-hx-0jw
+Accept: application/json
+
+###GET USER BY ID
+http://localhost:1234/mobile-app-ws/users/v1/uNMoYy68iSETb6c7lKvBrnMO5rTFrW
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJ6YUBnbWFpbC5jb20iLCJleHAiOjE1ODg4NDI3NTF9.lQF0aznQGmMro9bnMNZOPKX_VYSxe38wPbyPrxG4FJNnDzWoME4HsrLfqIMq-QAe_6W7iIEY4vJEWdx2Q_DD3w
+Accept: application/json
+#Accept: application/xml
+###
+#SIGN IN USER
+POST http://localhost:1234/mobile-app-ws/users/v1
+Content-Type: application/json
+Accept: application/json
+
+  {
+    "firstName": "hasan",
+    "lastName": "hasanic",
+    "email": "hasan@gmail.com",
+    "password": "hasan",
+    "addresses": [
+      {
+         "city": "Sarajevo",
+         "country": "Bosna i Hercegovina",
+         "streetName": "Bzetife 10",
+         "postalCode": "71000"
+      },
+      {
+        "city": "Sarajevo",
+        "country": "Bosna i Hercegovina",
+        "streetName": "Lbl 10",
+        "postalCode": "71000"
+      }
+    ]
+  }
+
+###
+#LOGIN USER
+POST http://localhost:1234/mobile-app-ws/users/v1/login
+
+{
+    "email": "mustafa@gmail.com",
+    "password": "mustafa"
+  }
+
+###
+#LOGIN USER
+POST http://localhost:1234/mobile-app-ws/users/v1/login
+{
+"email": "mustafa@gmail.com",
+"password": "mustafa"
+}
+
+###
+PUT http://localhost:1234/mobile-app-ws/users/v1/vuVpzXFEdf2dCW8InNB0MnUoe3w960
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJ6YUBnbWFpbC5jb20iLCJleHAiOjE1ODg4MDgyMTV9.PQQLwAZHdtonFE9QvSz5wJduqE7_lye03oSkh-bx0HKiwOp7ZqY7X9nAgwU8ZPnlG94TRWeBNOftyip1EFAiAQ
+Content-Type: application/json
+Accept: application/json
+{
+  "firstName": "mirza",
+  "lastName": "fds",
+  "email": "mirza@gmail.com",
+  "password": "mirza"
+  }
+###
+
+DELETE http://localhost:1234/mobile-app-ws/users/v1/p8DhtbyIFKI1m4JkTNFB2ztuFl4Zql
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaXJ6YUBnbWFpbC5jb20iLCJleHAiOjE1ODg4MDgyMTV9.PQQLwAZHdtonFE9QvSz5wJduqE7_lye03oSkh-bx0HKiwOp7ZqY7X9nAgwU8ZPnlG94TRWeBNOftyip1EFAiAQ
+Content-Type: application/json
+Accept: application/json
+###
